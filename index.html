@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Summary Generator</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Book Summary for Moroccan Students</title>
 </head>
 <body>
-  <header>
-    <h1>Book Summary Generator</h1>
-  </header>
-  <main>
-    <form id="search-form">
-      <label for="book-title">Book Title:</label>
-      <input type="text" id="book-title" name="book-title" placeholder="Enter book title" required>
-      <button type="submit">Get Summary</button>
-    </form>
-    <section id="book-summary">
-      <!-- Book summary will be displayed here -->
-    </section>
-  </main>
-  <script src="app.js"></script>
+    <div class="container">
+        <h1>Book Summary for Moroccan Students</h1>
+        <form id="search-form">
+            <input type="text" id="book-title" placeholder="Book title">
+            <button type="submit">Get Summary</button>
+        </form>
+        <div id="book-summary"></div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
