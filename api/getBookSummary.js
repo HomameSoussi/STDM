@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
     return res.status(400).send('Book title is required.');
   }
 
-  const prompt = `Write a concise summary of the book ${bookTitle}. Include the main topic or theme, key ideas or arguments presented, and key takeaways or conclusions. Summarize the author's background and qualifications, and provide a comparison to other books on the same subject. Also include the book's target audience or intended readership, its reception or critical response, and the publisher and first published date.`;
+  const prompt = `Write a concise summary of the book ${bookTitle}. Include the main topic or theme, key ideas or arguments presented, and key takeaways or conclusions. Summarize the author's background and qualifications, and provide a comparison to other books on the same subject. Also include the book's target audience or intended readership, its reception or critical response, and the publisher and first published date.Please provide a clear and concise summary that will give the reader a comprehensive understanding of the book's content and significance.`;
 
   try {
     const response = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
