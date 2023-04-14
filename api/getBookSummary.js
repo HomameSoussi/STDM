@@ -7,7 +7,15 @@ module.exports = async (req, res) => {
     return res.status(400).send('Book title is required.');
   }
 
-  const prompt = `in a 3000 Token response, Write a thorough yet concise summary of ${bookTitle}. Concentrate on only the most important takeaways and primary points. To sum up:  **The book's biggest takeaway and point in a singular sentence**\n\n## Main topic or theme\n\n- \n\n## Key ideas or arguments presented\n\n- \n\n## Chapter titles or main sections of the book\n\n### \n\n- \n\n## Key takeaways or conclusions\n\n- \n\n## Author's background and qualifications\n\n- \n\n## Comparison to other books on the same subject\n\n- \n\n## Target audience or intended readership\n\n- \n\n## Reception or critical response to the book\n\n- \n\n## Publisher and First Published Date\n\n- \n\n## Recommendations\n\n...`;
+  const prompt = `Write a concise summary of ${bookTitle} that focuses on the most important takeaways and primary points from the book. Your summary should include the following:
+
+Main topic or theme of the book
+Key ideas or arguments presented
+Brief summary of the main points covered in the book
+Key takeaways or conclusions
+To sum up: The main point or argument of the book in a brief summary.
+
+Please keep in mind that the maximum context length for this model is 4096 tokens, so your prompt should not exceed this limit.`;
 
   try {
     const response = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
