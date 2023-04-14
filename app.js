@@ -1,3 +1,7 @@
+const searchForm = document.getElementById('search-form');
+const bookTitleInput = document.getElementById('book-title');
+const bookSummary = document.getElementById('book-summary');
+
 searchForm.addEventListener('submit', async (event) => {
   event.preventDefault();
 
