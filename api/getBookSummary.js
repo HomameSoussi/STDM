@@ -19,15 +19,16 @@ module.exports = async (req, res) => {
       },
       body: JSON.stringify({
         prompt: prompt,
-        max_tokens: 500,
+        max_tokens: 4000,
         n: 1,
         stop: null,
         temperature: 1,
       }),
     });
-
-    if (!response.ok) {
-      console.error('Error with OpenAI API call:', response.statusText);
+    
+if (!response.ok) {
+      console.error('Error with OpenAI API call:', response.status, response.statusText);
+      console.error('Response:', await response.text());
       return res.status(500).send('Error fetching book summary. Please try again later.');
     }
 
@@ -39,4 +40,3 @@ module.exports = async (req, res) => {
     return res.status(500).send('Error fetching book summary. Please try again later.');
   }
 };
-
