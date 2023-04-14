@@ -1,12 +1,17 @@
 {
-  "name": "stdmforstudents",
+  "name": "moroccan-student-book-summary",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A web app for Moroccan students to get book summaries",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "book",
+    "summary",
+    "Moroccan",
+    "students"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
